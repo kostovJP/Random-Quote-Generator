@@ -37,16 +37,20 @@ export default function QuoteFetcher({ colorInfo }) {
     >
       <button
         className={`${
-          colorInfo === "dark" ? "bg-zinc-700  hover:border-gray-400 active:bg-zinc-900" 
-          : "bg-[#9d6b53] text-black hover:border-[#774936] active:bg-[#8a5a44]"
+          colorInfo === "dark"
+            ? "bg-zinc-700  hover:border-gray-400 active:bg-zinc-900"
+            : "bg-[#9d6b53] text-black hover:border-[#774936] active:bg-[#8a5a44]"
         } 
         w-60 md:w-75 justify-self-center rounded-lg 
                 border-3 border-transparent hover:border-3 hover:cursor-pointer
                 transition-all delay-1 `}
-        onClick={FetchQuote}
+        onClick={() => {setQuoteFetched(false); FetchQuote(); }}
       >
         click here to see a random quote
       </button>
+      {!QuoteFetched && <span className={
+        `${colorInfo === "dark" ? "text-gray-500": "text-orange-900"} text-sm text-center`
+      }>Loading quote.....</span>}
       {QuoteFetched && (
         <p
           className={`text-center mt-2 text-3xl grid grid-cols-1 opacity-0
@@ -56,9 +60,11 @@ export default function QuoteFetcher({ colorInfo }) {
             `}
         >
           "{Quote.quote_text}"
-          <span className={`${colorInfo === "dark" ? 
-            "text-gray-400"
-            : "text-[#b07d62]"}  text-lg mt-1 text-left `}>
+          <span
+            className={`${
+              colorInfo === "dark" ? "text-gray-400" : "text-[#b07d62]"
+            }  text-lg mt-1 text-left `}
+          >
             {" "}
             - {`by ${Quote.author_name}`}
           </span>
