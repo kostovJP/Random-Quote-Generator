@@ -51,9 +51,9 @@ Error generating stack: `+u.message+`
         `,children:[xl.jsx("span",{className:"col-start-1 md:col-start-3 text-center text-xl tracking-widest md:w-50",children:"RANDOM QUOTES"}),xl.jsx("span",{className:`col-start-3 md:col-start-5 flex justify-center\r
             `,children:xl.jsx("button",{className:`text-center hover:bg-gray-700 \r
                     px-3 rounded-xl transition-all delay-100 active:bg-gray-500\r
-                `,children:"light"})})]})}const Q1="https://api.api-ninjas.com/v1/quotes",X1="vdQDnZuDtwT8A+aiip9b8A==xLu5AVthrPeHrbF3";function j1(){const[D,fl]=ge.useState({quote_text:"",author_name:""}),[W,r]=ge.useState(!1);ge.useEffect(()=>{Q()},[]);const Q=async()=>{const cl=await(await fetch(Q1,{headers:{"X-Api-Key":X1}})).json(),bl=cl[0].quote,R=cl[0].author;console.log(bl,R),r(!0),fl(E=>({...E,quote_text:bl,author_name:R}))};return xl.jsxs("div",{className:`w-125 md:w-175 lg:w-200 border-none bg-blue-100 justify-self-center m-2 p-2 grid grid-cols-1\r
+                `,children:"light"})})]})}const Q1="https://api.api-ninjas.com/v1/quotes",X1="vdQDnZuDtwT8A+aiip9b8A==xLu5AVthrPeHrbF3";function j1(){const[D,fl]=ge.useState({quote_text:"",author_name:""}),[W,r]=ge.useState(!1);ge.useEffect(()=>{Q()},[]);const Q=async()=>{const cl=await(await fetch(Q1,{headers:{"X-Api-Key":X1}})).json(),bl=cl[0].quote,R=cl[0].author;console.log(bl,R),r(!0),fl(E=>({...E,quote_text:bl,author_name:R}))};return xl.jsxs("div",{className:`w-80 md:w-175 lg:w-200 border-none bg-blue-100 justify-self-center m-2 p-2 grid grid-cols-1\r
             rounded-lg mt-5\r
-        `,children:[xl.jsx("button",{className:`bg-blue-300 w-75 justify-self-center rounded-lg \r
+        `,children:[xl.jsx("button",{className:`bg-blue-300 w-60 md:w-75 justify-self-center rounded-lg \r
                 border-2 border-transparent hover:border-2 hover:border-blue-600 hover:cursor-pointer\r
                 transition-all delay-1 active:bg-gray-400`,onClick:Q,children:"click here to see a random quote"}),W&&xl.jsxs("p",{className:`text-center mt-2 text-3xl grid grid-cols-1 opacity-0
              transition-opacity delay-700 ease-in-out ${W?"opacity-100":""}
