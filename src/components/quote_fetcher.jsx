@@ -23,12 +23,12 @@ export default function QuoteFetcher() {
         });
     }
     return (
-        <div className="w-80 md:w-175 lg:w-200 border-none bg-blue-100 justify-self-center m-2 p-2 grid grid-cols-1
+        <div className="w-80 md:w-175 lg:w-200 border-none bg-zinc-950 text-white justify-self-center m-2 p-2 grid grid-cols-1
             rounded-lg mt-5
         ">
-            <button className="bg-blue-300 w-60 md:w-75 justify-self-center rounded-lg 
-                border-2 border-transparent hover:border-2 hover:border-blue-600 hover:cursor-pointer
-                transition-all delay-1 active:bg-gray-400"
+            <button className="bg-zinc-700 w-60 md:w-75 justify-self-center rounded-lg 
+                border-2 border-transparent hover:border-2 hover:border-gray-400 hover:cursor-pointer
+                transition-all delay-1 active:bg-zinc-900"
                 onClick={FetchQuote}
             >
                 click here to see a random quote

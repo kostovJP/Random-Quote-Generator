@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function Navbar(){
     return (
-        <div className="border-none shadow-md shadow-gray-400 w-full h-12 bg-gray-900 text-white
+        <div className="border-none shadow-sm shadow-black w-full h-12 bg-zinc-900 text-white
             grid md:grid-cols-5 xs:grid-cols-3 content-center
         ">
             <span className="col-start-1 md:col-start-3 text-center text-xl tracking-widest md:w-50">RANDOM QUOTES</span>

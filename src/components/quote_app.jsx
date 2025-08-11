@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState, useEffect} from "react";
 import Navbar from "./navbar";
 import QuoteFetcher from "./quote_fetcher";
 
