@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 const random_quote_url = "https://api.api-ninjas.com/v1/quotes"
+const api_key = import.meta.env.VITE_QUOTES_API_KEY;
 
 export default function QuoteFetcher() {
     const [Quote, setQuote] = useState({quote_text: "", author_name: "",});
@@ -11,7 +12,7 @@ export default function QuoteFetcher() {
     }, []);
     
     const FetchQuote = async () => {
-        const response = await fetch(random_quote_url,{headers: {'X-Api-Key': 'vdQDnZuDtwT8A+aiip9b8A==xLu5AVthrPeHrbF3'}});
+        const response = await fetch(random_quote_url,{headers: {'X-Api-Key': api_key}});
         const jsonResponse = await response.json();
         const random_quote = jsonResponse[0].quote;
         const author = jsonResponse[0].author;
